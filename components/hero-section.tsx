@@ -48,13 +48,13 @@ export function HeroSection() {
         <div className="flex-1 text-center md:text-left">
           <div data-animate className="mb-4">
             <span className="inline-block rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs font-medium tracking-wider text-primary uppercase">
-              Frontend Developer
+              Software Developer
             </span>
           </div>
 
           <h1 data-animate className="mb-6 font-mono text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             {"Hello I'm "}
-            <span className="text-primary text-glow-cyan">Evren Shah.</span>
+            <span className="text-primary text-glow-cyan">Chaitanya Verma.</span>
             <br />
             <span className="text-foreground">Frontend </span>
             <span className="text-secondary">Developer</span>
@@ -107,7 +107,7 @@ export function HeroSection() {
             <div className="absolute inset-0 rounded-full bg-primary/10 blur-[60px] animate-pulse-glow" />
             <Image
               src="/images/hero-illustration.jpg"
-              alt="Evren Shah - Frontend Developer illustration"
+              alt="Chaitanya Verma - Software Developer illustration"
               width={500}
               height={500}
               className="relative z-10 w-full max-w-md object-contain drop-shadow-2xl"
