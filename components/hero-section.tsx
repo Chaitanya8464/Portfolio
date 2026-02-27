@@ -5,10 +5,10 @@ import { Github, Twitter, Linkedin, Instagram } from "lucide-react"
 import Image from "next/image"
 
 const socials = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
+  { icon: Github, href: "https://github.com/Chaitanya8464", label: "GitHub" },
   { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Linkedin, href: "https://linkedin.com/chaitanya-verma-", label: "LinkedIn" },
 ]
 
 export function HeroSection() {
