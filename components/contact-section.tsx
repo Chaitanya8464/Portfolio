@@ -75,9 +75,9 @@ export function ContactSection() {
 
             <div className="space-y-4">
               {[
-                { icon: Mail, label: "hello@evrenshah.dev", href: "mailto:hello@evrenshah.dev" },
-                { icon: Phone, label: "+91 123 456 7890", href: "tel:+911234567890" },
-                { icon: MapPin, label: "Mumbai, India", href: "#" },
+                { icon: Mail, label: "chaianyaa.vermaa@gmail.com", href: "mailto:chaianyaa.vermaa@gmail.com" },
+                { icon: Phone, label: "9572528464", href: "tel:+919572528464" },
+                { icon: MapPin, label: "Mohali, Chandigarh", href: "#" },
               ].map((item) => (
                 <a
                   key={item.label}

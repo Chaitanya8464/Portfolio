@@ -45,7 +45,7 @@ export function Footer() {
 
         {/* Copyright */}
         <p className="text-xs text-muted-foreground">
-          {"© 2026 Evren Shah. All rights reserved."}
+          {"© 2026 Chaitanya Verma. All rights reserved."}
         </p>
       </div>
 
