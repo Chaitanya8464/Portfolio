@@ -14,10 +14,10 @@ const _spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Evren Shah | Frontend Developer & Creative Engineer',
-  description: 'Personal portfolio of Evren Shah - A passionate frontend developer and creative engineer specializing in modern web technologies, React, Next.js, and building premium digital experiences.',
+  title: 'Chaitanya Verma | Frontend Developer & Software Developer',
+  description: 'Personal portfolio of Chaitanya Verma - A passionate frontend developer and creative engineer specializing in modern web technologies, React, Next.js, and building premium digital experiences.',
   keywords: ['Frontend Developer', 'React', 'Next.js', 'Web Developer', 'Portfolio'],
-  authors: [{ name: 'Evren Shah' }],
+  authors: [{ name: 'Chaitanya Verma' }],
   icons: {
     icon: [
       {
