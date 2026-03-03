@@ -30,16 +30,38 @@ export function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground transition-shadow duration-300 group-hover:glow-cyan">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 2L2 14h12L8 2z" fill="currentColor" />
-            </svg>
-          </div>
-          <span className="font-mono text-lg font-bold text-foreground">
-            Personal
-          </span>
-        </a>
+       <a href="/" className="flex items-center gap-3 group">
+  {/* Logo Icon Container */}
+  <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 border border-slate-800 text-cyan-400 transition-all duration-300 group-hover:border-cyan-500/50 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.3)]">
+    <svg 
+      width="24" 
+      height="24" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="2.5" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    >
+      {/* Abstract 'C' with bracket feel */}
+      <path d="M10 8c-2 0-3 1-3 4s1 4 3 4" />
+      {/* Abstract 'V' with bracket feel */}
+      <path d="M14 8l2.5 8 2.5-8" />
+      {/* Subtle Code Slash */}
+      <path d="M12 6l-2 12" className="opacity-40" />
+    </svg>
+  </div>
+
+  {/* Text Branding */}
+  <div className="flex flex-col leading-none">
+    <span className="font-mono text-lg font-bold tracking-tighter text-slate-100 transition-colors group-hover:text-cyan-400">
+      CHAITANYA<span className="text-cyan-500">.</span>VERMA
+    </span>
+    <span className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-semibold">
+      Full-Stack Developer
+    </span>
+  </div>
+</a>
 
         {/* Desktop Nav */}
         <ul className="hidden items-center gap-8 md:flex">

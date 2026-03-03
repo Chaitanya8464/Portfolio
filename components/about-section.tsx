@@ -51,7 +51,7 @@ export function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5" />
               <Image
                 src="/images/about-illustration.jpg"
-                alt="About Evren Shah"
+                alt="About Chaitanya Verma"
                 width={400}
                 height={400}
                 className="relative z-10 h-auto w-full max-w-sm object-cover"
