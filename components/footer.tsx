@@ -17,15 +17,7 @@ export function Footer() {
   return (
     <footer className="relative border-t border-border bg-background py-12">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 sm:flex-row sm:justify-between">
-        {/* Brand */}
-        <div className="flex items-center gap-2">
-          <div className="flex h-7 w-7 items-center justify-center rounded-md border border-border text-primary">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 2L2 14h12L8 2z" fill="currentColor" />
-            </svg>
-          </div>
-          <span className="font-mono text-sm font-bold text-foreground">Personal</span>
-        </div>
+      
 
         {/* Links */}
         <div className="flex items-center gap-4">

@@ -1,31 +1,32 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import { Laptop, Server, Database, Globe } from "lucide-react"
 
-const experiences = [
+const expertises = [
   {
-    company: "Google",
-    role: "Lead Software Engineer",
-    period: "Nov 2019 - Present",
-    color: "text-primary",
+    title: "Frontend Development",
+    icon: Laptop,
     description:
-      "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
+      "Skilled in building fast, responsive websites that work seamlessly across all devices, and creating engaging user experiences.",
   },
   {
-    company: "Youtube",
-    role: "Software Engineer",
-    period: "Jan 2017 - Oct 2019",
-    color: "text-secondary",
+    title: "Backend Development",
+    icon: Server,
     description:
-      "At Youtube, I served as a Software Engineer, focusing on the design and implementation of backend systems for the social media giant's dynamic platform. Working on projects that facilitated large-scale data processing and user engagement features, I leveraged my expertise to ensure seamless functionality and scalability.",
+      "Developing reliable server systems and APIs that power applications efficiently, handling business logic and ensuring smooth performance at scale.",
   },
   {
-    company: "Apple",
-    role: "Junior Software Engineer",
-    period: "Jan 2016 - Dec 2017",
-    color: "text-foreground",
+    title: "Database Design",
+    icon: Database,
     description:
-      "During my tenure at Apple, I held the role of Software Architect, where I played a key role in shaping the architecture of mission-critical software projects. Responsible for designing scalable and efficient systems, I provided technical leadership to a cross-functional team.",
+      "Designing optimized databases that keep data organized and accessible, ensuring fast queries and reliable performance as businesses grow.",
+  },
+  {
+    title: "Deployment & Cloud",
+    icon: Globe,
+    description:
+      "Deploying applications on cloud platforms like AWS and Netlify using Docker, ensuring smooth releases and reliable performance.",
   },
 ]
 
@@ -43,8 +44,8 @@ export function ExperienceSection() {
               setTimeout(() => {
                 el.style.transition = "opacity 0.6s ease, transform 0.6s ease"
                 el.style.opacity = "1"
-                el.style.transform = "translateX(0)"
-              }, i * 150)
+                el.style.transform = "translateY(0)"
+              }, i * 100)
             })
             observer.unobserve(entry.target)
           }
@@ -66,60 +67,37 @@ export function ExperienceSection() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-16 text-center">
           <span className="mb-3 inline-block rounded-md border border-border bg-surface px-3 py-1 text-xs font-medium tracking-wider text-muted-foreground uppercase">
-            Career Path
+            Expertise
           </span>
           <h2 className="font-mono text-3xl font-bold text-foreground sm:text-4xl">
-            My <span className="gradient-text">Experience</span>
+            Field <span className="gradient-text">Expertises</span>
           </h2>
         </div>
 
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-0 top-0 bottom-0 hidden w-px bg-border md:left-8 md:block" />
-
-          <div className="flex flex-col gap-8">
-            {experiences.map((exp, i) => (
-              <div
-                key={exp.company}
-                data-exp
-                className="group relative rounded-lg border border-border bg-card p-6 transition-all duration-300 hover:border-primary card-hover md:ml-16"
-                style={{
-                  opacity: 0,
-                  transform: "translateX(-24px)",
-                }}
-              >
-                {/* Timeline dot */}
-                <div className="absolute -left-[2.55rem] top-8 hidden h-2.5 w-2.5 rounded-full border-2 border-primary bg-background md:block" />
-
-                <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                  <div className="flex items-center gap-3">
-                    <div
-                      className={`flex h-8 w-8 items-center justify-center rounded-md bg-surface font-mono text-xs font-bold ${
-                        i === 0 ? "text-primary" : i === 1 ? "text-secondary" : "text-foreground"
-                      }`}
-                    >
-                      {exp.company[0]}
-                    </div>
-                    <div>
-                      <h3 className="font-mono text-base font-bold text-foreground">
-                        {exp.role}
-                      </h3>
-                      <span className="text-sm text-muted-foreground">
-                        at {exp.company}
-                      </span>
-                    </div>
-                  </div>
-                  <span className="inline-block rounded-md border border-border bg-surface px-3 py-1 text-xs font-medium text-muted-foreground">
-                    {exp.period}
-                  </span>
+        <div className="grid gap-6 sm:grid-cols-2 lg:gap-8">
+          {expertises.map((item, i) => (
+            <div
+              key={item.title}
+              data-exp
+              className="group relative rounded-lg border border-border bg-card p-6 transition-all duration-300 hover:border-primary hover:bg-surface card-hover"
+              style={{
+                opacity: 0,
+                transform: "translateY(24px)",
+              }}
+            >
+              <div className="mb-4 flex items-center gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-md bg-surface text-primary transition-colors duration-300 group-hover:bg-primary/10">
+                  <item.icon className="h-6 w-6" />
                 </div>
-
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {exp.description}
-                </p>
+                <h3 className="font-mono text-lg font-bold text-foreground">
+                  {item.title}
+                </h3>
               </div>
-            ))}
-          </div>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {item.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
