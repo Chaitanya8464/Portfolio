@@ -34,7 +34,10 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0B0F19',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0B0F19' },
+  ],
   width: 'device-width',
   initialScale: 1,
 }
@@ -45,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${_inter.variable} ${_spaceGrotesk.variable}`}>
+    <html lang="en" className={`${_inter.variable} ${_spaceGrotesk.variable}`} suppressHydrationWarning>
       <body className="font-sans antialiased overflow-x-hidden">
         {children}
         <Analytics />

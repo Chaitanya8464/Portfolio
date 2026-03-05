@@ -41,10 +41,10 @@ export function ExperienceSection() {
             items.forEach((item, i) => {
               const el = item as HTMLElement
               setTimeout(() => {
-                el.style.transition = "opacity 0.7s ease, transform 0.7s ease"
+                el.style.transition = "opacity 0.6s ease, transform 0.6s ease"
                 el.style.opacity = "1"
                 el.style.transform = "translateX(0)"
-              }, i * 200)
+              }, i * 150)
             })
             observer.unobserve(entry.target)
           }
@@ -61,42 +61,40 @@ export function ExperienceSection() {
     <section
       ref={sectionRef}
       id="experience"
-      className="relative py-24 bg-background"
+      className="relative py-24 bg-surface"
     >
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-16 text-center">
-          <span className="mb-3 inline-block rounded-full border border-secondary/30 bg-secondary/5 px-4 py-1.5 text-xs font-medium tracking-wider text-secondary uppercase">
+          <span className="mb-3 inline-block rounded-md border border-border bg-surface px-3 py-1 text-xs font-medium tracking-wider text-muted-foreground uppercase">
             Career Path
           </span>
           <h2 className="font-mono text-3xl font-bold text-foreground sm:text-4xl">
-            My <span className="text-secondary">Experience</span>
+            My <span className="gradient-text">Experience</span>
           </h2>
         </div>
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-0 top-0 bottom-0 hidden w-px bg-gradient-to-b from-primary via-secondary to-transparent md:left-8 md:block" />
+          <div className="absolute left-0 top-0 bottom-0 hidden w-px bg-border md:left-8 md:block" />
 
           <div className="flex flex-col gap-8">
             {experiences.map((exp, i) => (
               <div
                 key={exp.company}
                 data-exp
-                className="group relative rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:glow-cyan md:ml-16"
+                className="group relative rounded-lg border border-border bg-card p-6 transition-all duration-300 hover:border-primary card-hover md:ml-16"
                 style={{
                   opacity: 0,
-                  transform: "translateX(-30px)",
+                  transform: "translateX(-24px)",
                 }}
               >
                 {/* Timeline dot */}
-                <div className="absolute -left-[2.55rem] top-8 hidden h-3 w-3 rounded-full border-2 border-primary bg-background md:block">
-                  <div className="absolute inset-0 rounded-full bg-primary/50 animate-pulse-glow" />
-                </div>
+                <div className="absolute -left-[2.55rem] top-8 hidden h-2.5 w-2.5 rounded-full border-2 border-primary bg-background md:block" />
 
                 <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex items-center gap-3">
                     <div
-                      className={`flex h-8 w-8 items-center justify-center rounded-lg bg-muted font-mono text-xs font-bold ${
+                      className={`flex h-8 w-8 items-center justify-center rounded-md bg-surface font-mono text-xs font-bold ${
                         i === 0 ? "text-primary" : i === 1 ? "text-secondary" : "text-foreground"
                       }`}
                     >
@@ -111,7 +109,7 @@ export function ExperienceSection() {
                       </span>
                     </div>
                   </div>
-                  <span className="inline-block rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
+                  <span className="inline-block rounded-md border border-border bg-surface px-3 py-1 text-xs font-medium text-muted-foreground">
                     {exp.period}
                   </span>
                 </div>

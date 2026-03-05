@@ -49,10 +49,10 @@ export function ProjectsSection() {
             items.forEach((item, i) => {
               const el = item as HTMLElement
               setTimeout(() => {
-                el.style.transition = "opacity 0.8s ease, transform 0.8s ease"
+                el.style.transition = "opacity 0.6s ease, transform 0.6s ease"
                 el.style.opacity = "1"
                 el.style.transform = "translateY(0)"
-              }, i * 250)
+              }, i * 150)
             })
             observer.unobserve(entry.target)
           }
@@ -71,15 +71,13 @@ export function ProjectsSection() {
       id="projects"
       className="relative py-24 bg-background"
     >
-      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-px w-2/3 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-16 text-center">
-          <span className="mb-3 inline-block rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs font-medium tracking-wider text-primary uppercase">
+          <span className="mb-3 inline-block rounded-md border border-border bg-surface px-3 py-1 text-xs font-medium tracking-wider text-muted-foreground uppercase">
             Portfolio
           </span>
           <h2 className="font-mono text-3xl font-bold text-foreground sm:text-4xl">
-            My <span className="text-primary text-glow-cyan">Projects</span>
+            My <span className="gradient-text">Projects</span>
           </h2>
         </div>
 
@@ -95,22 +93,20 @@ export function ProjectsSection() {
             >
               {/* Project image */}
               <div className="group relative flex-1 w-full">
-                <div className="relative overflow-hidden rounded-2xl border border-border transition-all duration-500 group-hover:border-primary/30 group-hover:glow-cyan">
+                <div className="relative overflow-hidden rounded-lg border border-border transition-all duration-300 hover:border-primary hover:shadow-lg">
                   <Image
                     src={project.image}
                     alt={project.title}
                     width={600}
                     height={400}
-                    className="h-auto w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </div>
               </div>
 
               {/* Project info */}
               <div className="flex-1">
-                <span className="mb-2 block font-mono text-5xl font-bold text-primary/20">
+                <span className="mb-2 block font-mono text-5xl font-bold text-muted-foreground/30">
                   {project.number}
                 </span>
                 <h3 className="mb-4 font-mono text-xl font-bold text-foreground sm:text-2xl">
@@ -125,7 +121,7 @@ export function ProjectsSection() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium text-muted-foreground"
+                      className="rounded-md border border-border bg-surface px-3 py-1 text-xs font-medium text-muted-foreground"
                     >
                       {tag}
                     </span>
@@ -138,7 +134,7 @@ export function ProjectsSection() {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(0,245,255,0.3)]"
+                    className="flex items-center gap-2 rounded-md bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:bg-primary/90 button-press"
                   >
                     Live Demo
                     <ExternalLink className="h-3.5 w-3.5" />
@@ -147,7 +143,7 @@ export function ProjectsSection() {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 rounded-full border border-border px-5 py-2 text-sm font-semibold text-foreground transition-all duration-300 hover:border-primary hover:text-primary"
+                    className="flex items-center gap-2 rounded-md border border-border px-5 py-2 text-sm font-semibold text-foreground transition-all duration-300 hover:border-primary hover:text-primary button-press"
                   >
                     GitHub
                     <Github className="h-3.5 w-3.5" />

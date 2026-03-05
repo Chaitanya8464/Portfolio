@@ -17,10 +17,10 @@ export function ContactSection() {
             items.forEach((item, i) => {
               const el = item as HTMLElement
               setTimeout(() => {
-                el.style.transition = "opacity 0.8s ease, transform 0.8s ease"
+                el.style.transition = "opacity 0.6s ease, transform 0.6s ease"
                 el.style.opacity = "1"
                 el.style.transform = "translateY(0)"
-              }, i * 150)
+              }, i * 100)
             })
             observer.unobserve(entry.target)
           }
@@ -46,15 +46,13 @@ export function ContactSection() {
       id="contact"
       className="relative py-24 bg-surface"
     >
-      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-px w-2/3 bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
-
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-16 text-center">
-          <span className="mb-3 inline-block rounded-full border border-secondary/30 bg-secondary/5 px-4 py-1.5 text-xs font-medium tracking-wider text-secondary uppercase">
+          <span className="mb-3 inline-block rounded-md border border-border bg-surface px-3 py-1 text-xs font-medium tracking-wider text-muted-foreground uppercase">
             Get In Touch
           </span>
           <h2 className="font-mono text-3xl font-bold text-foreground sm:text-4xl">
-            Contact <span className="text-secondary">Me</span>
+            Contact <span className="gradient-text">Me</span>
           </h2>
         </div>
 
@@ -63,7 +61,7 @@ export function ContactSection() {
           <div className="space-y-8">
             <div
               data-contact
-              style={{ opacity: 0, transform: "translateY(30px)" }}
+              style={{ opacity: 0, transform: "translateY(24px)" }}
             >
               <h3 className="mb-4 font-mono text-xl font-bold text-foreground">
                 {"Let's work together"}
@@ -83,10 +81,10 @@ export function ContactSection() {
                   key={item.label}
                   data-contact
                   href={item.href}
-                  className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 text-muted-foreground transition-all duration-300 hover:border-primary/30 hover:text-primary"
-                  style={{ opacity: 0, transform: "translateY(30px)" }}
+                  className="flex items-center gap-4 rounded-lg border border-border bg-card p-4 text-muted-foreground transition-all duration-300 hover:border-primary hover:text-primary card-hover"
+                  style={{ opacity: 0, transform: "translateY(24px)" }}
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-md bg-surface">
                     <item.icon className="h-4 w-4 text-primary" />
                   </div>
                   <span className="text-sm">{item.label}</span>
@@ -99,7 +97,7 @@ export function ContactSection() {
           <form onSubmit={handleSubmit} className="space-y-5">
             <div
               data-contact
-              style={{ opacity: 0, transform: "translateY(30px)" }}
+              style={{ opacity: 0, transform: "translateY(24px)" }}
             >
               <label htmlFor="name" className="mb-2 block text-sm font-medium text-foreground">
                 Name
@@ -111,13 +109,13 @@ export function ContactSection() {
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 placeholder="Your name"
-                className="w-full rounded-xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder-muted-foreground outline-none transition-all duration-300 focus:border-primary focus:ring-1 focus:ring-primary/30"
+                className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder-muted-foreground outline-none transition-all duration-300 focus:border-primary focus:ring-1 focus:ring-primary/30"
               />
             </div>
 
             <div
               data-contact
-              style={{ opacity: 0, transform: "translateY(30px)" }}
+              style={{ opacity: 0, transform: "translateY(24px)" }}
             >
               <label htmlFor="email" className="mb-2 block text-sm font-medium text-foreground">
                 Email
@@ -129,13 +127,13 @@ export function ContactSection() {
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 placeholder="your@email.com"
-                className="w-full rounded-xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder-muted-foreground outline-none transition-all duration-300 focus:border-primary focus:ring-1 focus:ring-primary/30"
+                className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder-muted-foreground outline-none transition-all duration-300 focus:border-primary focus:ring-1 focus:ring-primary/30"
               />
             </div>
 
             <div
               data-contact
-              style={{ opacity: 0, transform: "translateY(30px)" }}
+              style={{ opacity: 0, transform: "translateY(24px)" }}
             >
               <label htmlFor="message" className="mb-2 block text-sm font-medium text-foreground">
                 Message
@@ -147,17 +145,17 @@ export function ContactSection() {
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 placeholder="Your message..."
-                className="w-full resize-none rounded-xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder-muted-foreground outline-none transition-all duration-300 focus:border-primary focus:ring-1 focus:ring-primary/30"
+                className="w-full resize-none rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder-muted-foreground outline-none transition-all duration-300 focus:border-primary focus:ring-1 focus:ring-primary/30"
               />
             </div>
 
             <div
               data-contact
-              style={{ opacity: 0, transform: "translateY(30px)" }}
+              style={{ opacity: 0, transform: "translateY(24px)" }}
             >
               <button
                 type="submit"
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3.5 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(0,245,255,0.3)] disabled:opacity-50"
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-3.5 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:bg-primary/90 button-press disabled:opacity-50"
                 disabled={submitted}
               >
                 {submitted ? (
