@@ -63,7 +63,7 @@ export function AboutSection() {
               className="mb-4"
               style={{ opacity: 0, transform: "translateY(24px)" }}
             >
-              <span className="mb-3 inline-block rounded-md border border-border bg-surface px-3 py-1 text-xs font-medium tracking-wider text-muted-foreground uppercase">
+              <span className="mb-1 inline-block rounded-md border border-border bg-surface px-3 py-1 text-xs font-medium tracking-wider text-muted-foreground uppercase">
                 Who am I
               </span>
             </div>
@@ -82,34 +82,17 @@ export function AboutSection() {
               style={{ opacity: 0, transform: "translateY(24px)" }}
             >
               <p className="text-base leading-relaxed">
-                {"I'm a passionate developer who specializes in full-stack development. I bring technical and visual aspects of digital products to life with clean, efficient code. User experience and writing clear, readable code matters to me."}
+                I am Chaitanya Verma, a passionate Full-Stack Web Developer with experience in building scalable and responsive web applications. My technical expertise includes HTML, CSS, JavaScript, and React.js, along with knowledge of backend development.
               </p>
               <p className="text-base leading-relaxed">
-                {"I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way. Now, I build cutting-edge web applications using modern frameworks such as Next.js, TypeScript, and Tailwind CSS."}
+                During my industrial training at Academic Advancement of Information Technology, Mohali, I developed a complete e-commerce platform called Travela, gaining practical experience in modern web technologies and project development.
               </p>
               <p className="text-base leading-relaxed">
-                {"When I'm not coding, you can find me exploring indie hacker communities, witnessing the journey of early startups, or enjoying some free time. I share tech-related content and build in public on Twitter and GitHub."}
+                I have also worked on various projects including automation systems and AI-based applications such as Face Recognition Attendance Systems.
               </p>
-            </div>
-
-            {/* Stats */}
-            <div
-              data-about
-              className="mt-8 flex flex-wrap gap-8"
-              style={{ opacity: 0, transform: "translateY(24px)" }}
-            >
-              {[
-                { value: "7+", label: "Years Experience" },
-                { value: "50+", label: "Projects Completed" },
-                { value: "30+", label: "Happy Clients" },
-              ].map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <div className="font-mono text-2xl font-bold text-primary">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs text-muted-foreground">{stat.label}</div>
-                </div>
-              ))}
+              <p className="text-base leading-relaxed">
+                I am highly motivated to learn new technologies, build impactful solutions, and grow as a professional developer.
+              </p>
             </div>
           </div>
         </div>
