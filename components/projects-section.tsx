@@ -2,39 +2,45 @@
 
 import { useEffect, useRef } from "react"
 import Image from "next/image"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Github, Subtitles } from "lucide-react"
 
 const projects = [
-  {
+   {
     number: "01",
-    title: "Crypto Screener Application",
+    title: "CampusCare - A complete solution for campus grievance redressal",
     description:
-      "A comprehensive cryptocurrency screener that provides real-time data, advanced filtering, and portfolio tracking. Built with React, TypeScript, and integrated with multiple crypto APIs for live market data visualization.",
-    image: "/images/project-1.jpg",
-    tags: ["React", "TypeScript", "API", "Charts"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "A comprehensive campus management system designed to streamline administrative tasks, student services, and faculty coordination. Built with modern web technologies for efficient campus operations.",
+    image: "/images/blinkxai.png",
+    tags: ["React 19 ", " Firebase (Firestore + Auth)", " Tailwind CSS", " Framer Motion"],
+    liveUrl: "https://campus-care-mu.vercel.app/",
+    githubUrl: "https://github.com/Chaitanya8464/CampusCare",
   },
+
+
   {
     number: "02",
-    title: "Euphoria - Ecommerce (Apparels) Website Template",
+    title: "BlinxAI - AI-Powered Real-Time Chat Platform",
+    
     description:
-      "A modern e-commerce template designed for fashion and apparel brands. Features a clean product catalog, cart management, and responsive design. Built with Next.js and styled with Tailwind CSS for maximum performance.",
-    image: "/images/project-2.jpg",
-    tags: ["Next.js", "Tailwind", "E-commerce", "Stripe"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "An AI-native full-stack real-time chat platform powered by Model Context Protocol (MCP) and Spring AI. Features context-aware LLM conversations, bi-directional WebSocket pipelines, and cloud-native scalability with auto-scaling from 2 to 10 pods",
+    image: "/images/campuscare.png",
+    tags: ["React 19", " MongoDB", "Java 17", "Docker", "MCP"],
+    liveUrl: "https://blinxai.me/",
+    githubUrl: "https://github.com/Chaitanya8464/ConnectOthers",
   },
+
+  
   {
     number: "03",
-    title: "Blog Website Template",
+    title: "Attend By Face - Attendance Face Recognition System",
     description:
-      "A minimal yet powerful blog template with markdown support, SEO optimization, and dark mode. Designed for developers and writers who want a fast, beautiful blogging platform with zero-config deployment.",
-    image: "/images/project-3.jpg",
-    tags: ["Next.js", "MDX", "SEO", "Dark Mode"],
+      "An attendance management system that utilizes facial recognition technology to automate the process of recording attendance. It provides a secure and efficient way to track attendance in educational institutions and workplaces.",
+    image: "/images/face-attendance.png",
+    tags: ["Python", "OpenCV", "face_recognition", "SQLite", "Docker"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Chaitanya8464/Face-Attendance",
   },
+ 
 ]
 
 export function ProjectsSection() {
@@ -79,27 +85,30 @@ export function ProjectsSection() {
           <h2 className="font-mono text-3xl font-bold text-foreground sm:text-4xl">
             My <span className="gradient-text">Projects</span>
           </h2>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Some projects are still under development — check out the completed ones below.
+          </p>
         </div>
 
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-30">
           {projects.map((project, i) => (
             <div
               key={project.title}
               data-project
-              className={`flex flex-col items-center gap-10 md:gap-14 ${
+              className={`flex flex-col items-center gap-8 md:gap-10 ${
                 i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
               style={{ opacity: 0, transform: "translateY(40px)" }}
             >
               {/* Project image */}
-              <div className="group relative flex-1 w-full">
+              <div className="group relative flex-1 w-full max-w-md">
                 <div className="relative overflow-hidden rounded-lg border border-border transition-all duration-300 hover:border-primary hover:shadow-lg">
                   <Image
                     src={project.image}
                     alt={project.title}
-                    width={600}
-                    height={400}
-                    className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    width={500}
+                    height={320}
+                    className="h-[280px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
               </div>
