@@ -37,7 +37,7 @@ const projects = [
       "An attendance management system that utilizes facial recognition technology to automate the process of recording attendance. It provides a secure and efficient way to track attendance in educational institutions and workplaces.",
     image: "/images/face-attendance.png",
     tags: ["Python", "OpenCV", "face_recognition", "SQLite", "Docker"],
-    liveUrl: "#",
+    liveUrl: "https://face-attendance-hnic.onrender.com",
     githubUrl: "https://github.com/Chaitanya8464/Face-Attendance",
   },
  
